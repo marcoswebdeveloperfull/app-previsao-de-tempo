@@ -4,7 +4,7 @@ const botaoDeBusca = document.querySelector(".btn-busca");
 botaoDeBusca.addEventListener('click', async () => {
     const cidade = document.getElementById("input-busca").value;
 
-    if (cidade) return;
+    if (!cidade) return;
 
     const dados = await buscarDadosDaCidade(cidade);
 
